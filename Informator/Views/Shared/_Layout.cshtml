@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/mainStyle.css"/>
+        <meta name="viewport" content="width=device-width"/>
+    </head>
+
+    <body>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/ckeditor/ckeditor.js"></script>
+     
+        <header class="header">
+            <div class="menuIcon">
+                <button class="callMenu">
+                    <div></div>
+                </button>
+            </div>
+            <div class="logo"> 
+
+            </div>
+            <div class="exit">
+
+            </div>
+        </header>
+
+       
+        <nav class="nav">
+            <ul class="listLinkMenu">
+                <li class="linkMenu">
+                    <a asp-controller="Home" asp-action="MyProfilePage">Мой прфоиль</a>
+                 </li>
+                <li class="linkMenu">
+                    <a asp-controller="Home" asp-action="SendMessPage">Рассылка</a>
+                </li>
+                <li class="linkMenu">
+                    <a asp-controller="Home" asp-action="MailingListsPage">Группы рассылки</a>
+                </li>
+                <li class="linkMenu">
+                    <a asp-controller="Home" asp-action="AddresseesPage">Управление адресатами</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="navOverlay">
+
+        </div>
+
+        <main class="main">
+            <div class="mainContent">
+                @RenderBody()
+            </div>
+            
+        </main>
+        <footer class="footer">
+
+        </footer>
+        <div class="shadowModalWindow">
+            
+        </div>
+       
+        <script src="~/js/menu.js"></script>
+        <script src="~/js/modalWindow.js"></script>
+        
+    </body>
+   
+</html>

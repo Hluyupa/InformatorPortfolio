@@ -1,0 +1,133 @@
+﻿@model List<Informator.Models.Group>
+
+<head>
+    <link rel="stylesheet" href="~/css/mailingListsPageStyle.css"/>
+    
+</head>
+
+<div class="mailingListsPageContent">
+    <div class="textArea">
+        <h1>Создание групп рассылки</h1>
+        <p>Здесь вы можете создать новые и посмотреть существующие группы для рассылки сообщений</p>
+    </div>
+  
+
+    <div class="mailingListTable">
+        <div class="searchBlock">
+            <input type="text"/>
+        </div>
+        <div class="controlButtonsGroup">
+            <ul>
+                <li class="customButton createGroupButton">
+                    Добавить
+                </li>
+            </ul>
+         
+        </div>
+        <table class="groupsTable">
+            <thead>
+                <tr>
+                    <th>
+                        Группа
+                    </th>
+                
+                    <th>
+                        Количество участников
+                    </th>
+
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="modalWindow createGroupWindow">
+        <div class="createNewGroup">
+            <p class="labelGroupName">Наименование группы</p>
+            <input class="textAreaGroupName" type="text" required/>
+            <p class="labelChoiceAddress">Выберите адресаты, которые будут состоять в группе</p>
+            <table class="contactTable customTable">
+                <thead>
+                    <tr>
+                        <th>
+                            Имя адресата
+                        </th>
+                        <th>
+                            Платформа
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <div class="buttonPanel ">
+                <button class="customButton cnacelButton">Отмена</button>
+                <button class="customButton okButton">Ок</button>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="modalWindow updateGroupWindow">
+        <div class="updateGroup">
+            <p class="headerUpdateGroup">Редактирование группы</p>
+
+            <div class="updateGroupArea">
+                <div class="updatedGroup">
+                    <p class="nameUpdatedGroup">Название группы:</p>
+                    <input class="nameUpdatedGroupInput" type="text" required/>
+                    <table class="customTable contactsTableUpdatedGroup">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Адресаты в группе
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="addRemoveButtons">
+                    <button class="addButton">Добавить</button>
+                    <button class="removeButton">Убрать</button>
+                </div>
+                <div class="contacts">
+                    <p>Адресаты</p>
+                    <table class="customTable contactsTableOutGroup">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Адресаты
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+            <div class="buttonPanel">
+                <button class="customButton cnacelButton">Отмена</button>
+                <button class="customButton okButton">Ок</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalWindow messageBox">
+        <p>Секундочку...</p>
+    </div>
+    
+    <script src="~/js/choiceContactTable.js"></script>
+</div>

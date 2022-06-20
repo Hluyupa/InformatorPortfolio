@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informator", "Informator\Informator.csproj", "{889A36EC-C044-4D14-B11C-78DB7DFFABD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{889A36EC-C044-4D14-B11C-78DB7DFFABD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889A36EC-C044-4D14-B11C-78DB7DFFABD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889A36EC-C044-4D14-B11C-78DB7DFFABD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889A36EC-C044-4D14-B11C-78DB7DFFABD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87145CA6-3856-4118-BFE8-51778B8CA715}
+	EndGlobalSection
+EndGlobal

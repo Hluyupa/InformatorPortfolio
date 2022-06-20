@@ -1,0 +1,275 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --borderblue: #20A4F3;
+    --lightblue: #CEF3F0;
+    --companyGreen: #28A737;
+    --companyWhite: #FFFFFF;
+    --companyLightGreen: #65f175;
+}
+
+html {
+    height: 100%;
+    margin: 0px;
+   
+}
+
+body {
+    font-family: 'Comfortaa';
+    font-size:16px;
+    margin: 0px;
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(100px, auto) 1fr minmax(50px, auto)/1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+input {
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 1.75rem;
+    padding: 0px 10px;
+    border-radius: 100px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.callMenu{
+    background-color:transparent;
+    z-index:4;
+    position:relative;
+    top:10px;
+    left:10px;
+    width:50px;
+    height:50px;
+    border:0px;
+}
+
+.callMenu div, .callMenu div::before, .callMenu div::after {
+    
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -12.5px;
+    width: 25px;
+    height: 2px;
+    border-radius:100px;
+    background-color: black;
+}
+
+.callMenu div::before, .callMenu div::after {
+    content:'';
+    transition:0.25s;
+}
+
+.callMenu div::before {
+    transform: translateY(-5px);
+}
+.callMenu div::after {
+    transform: translateY(5px);
+}
+
+.callMenuActive div::before{
+    transform: rotate(-35deg);
+    width:10px;
+    transform-origin:left bottom;
+}
+
+.callMenuActive div::after {
+    transform: rotate(35deg);
+    width: 10px;
+    transform-origin: left top;
+}
+
+
+.navOverlay {
+    z-index: 2;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: -100%;
+    background-color: rgb(0, 0, 0, .3);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.nav {
+    z-index: 3;
+    left: -200px;
+    min-height: 100%;
+    width: 200px;
+    background: linear-gradient(45deg,var(--companyGreen), var(--companyWhite) 70%);
+    position: absolute;
+    display: grid;
+    grid-template-rows:70px 1fr;
+    grid-template-columns: 1fr;
+   
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+
+
+.listLinkMenu {
+    grid-row:2/3;
+    
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.linkMenu {
+    
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.linkMenu:hover{
+    font-size:25px;
+    transition-duration:0.25s;
+}
+
+.linkMenu a {
+    word-spacing: 200px;
+    text-decoration: none;
+    color:black;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+}
+
+.mainContent {
+    grid-column: 2/3;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.shadowModalWindow {
+    z-index:5;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgb(0, 0, 0, .3);
+    visibility:hidden;
+    
+}
+
+.modalWindow {
+    z-index:6;
+    opacity:0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.messageBox{
+    padding:10px;
+    width:200px;
+    height:75px;
+    background-color:var(--companyWhite);
+}
+
+.shadowModalWindow.active, .modalWindow.active{
+    opacity:0;
+    visibility: visible;
+    animation-name:shadowAnimation;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes shadowAnimation{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.customButton {
+    transition-duration: 0.1s;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: 0px;
+    background-color: var(--companyGreen);
+    font-family: 'Comfortaa';
+    font-size: 16px;
+}
+
+.customButton:active {
+    background-color: var(--companyLightGreen);
+}
+
+.customTable {
+    
+border-collapse: collapse;
+margin: 5px 10px;
+}
+
+.customTable tr {
+border-bottom: 2px solid black;
+transition-duration: 0.1s;
+cursor: pointer;
+}
+
+.customTable tbody tr:hover {
+background-color: var(--companyLightGreen);
+}
+
+.customTable th {
+font-size: 18px;
+}
+
+.customTable th, .customTable td {
+    padding: 5px 0px;
+    text-align: left;
+}
+
+.buttonPanel {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr auto;
+    margin: 0px 10px 10px;
+}
+
+.cnacelButton {
+    grid-column: 1/2;
+}
+
+.okButton {
+    grid-column: 3/4
+}
+
+
+.cnacelButton, .okButton {
+    padding: 7px;
+    width: 100px;
+}
+
+.selected{
+    background-color:var(--companyGreen)
+}

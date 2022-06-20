@@ -1,0 +1,22 @@
+﻿@model Informator.Models.AccountViewModels.LoginViewModel
+<head>
+    <link rel="stylesheet" href="~/css/authPageStyle.css"/>
+</head>
+<div class="authContent">
+    <div class="authWindow">
+        <div class="icon">
+
+        </div>
+        <form class="authForm" method="post">
+            <label>Логин</label>
+            <input asp-for="Username" type="text" required/>
+            <label>Пароль</label>
+            <input asp-for="Password" type="password" required/>
+            
+            <button type="submit">Войти</button>
+        </form>
+        <div class="information">
+
+        </div>
+    </div>
+</div>

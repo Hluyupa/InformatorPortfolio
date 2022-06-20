@@ -1,0 +1,51 @@
+﻿.authContent {
+    display:grid;
+    height:100%;
+    width:100%;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr;
+}
+
+.authWindow {
+    justify-self: center;
+    align-self: center;
+    width: 250px;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "icon"
+        "authForm"
+        "information";
+    box-shadow: 0 0 20px;
+    border-radius:10px;
+}
+
+.icon {
+    grid-area: icon;
+}
+
+.authForm {
+    grid-area: authForm;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 5px;
+    justify-items: center;
+   
+}
+
+.authForm label {
+    align-self:end;
+}
+
+.authForm input {
+   
+    
+    width: 90%;
+    
+}
+
+.information {
+    grid-area: information;
+}

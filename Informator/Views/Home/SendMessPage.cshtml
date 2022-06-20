@@ -1,0 +1,106 @@
+﻿@using Microsoft.AspNetCore.Identity
+<head>
+    <link rel="stylesheet" href="~/css/sendMessPageStyle.css"/>
+</head>
+<div class="sendMessPageContent">
+    
+    <div class="textArea">
+        <h1>Рассылка сообщений</h1>
+        <p>Приветствую, @User.Identity.Name , здесь вы можете напечатать и разослать своё сообщение</p>
+    </div>
+    
+
+    <div class="editorMess">
+        <div class="textEditor">
+             <form> <!--method="post" asp-controller="Home" asp-action="SendMessage"-->
+                <textarea name="editor1" id="editor1" rows="10" cols="80">
+                    
+                </textarea>
+                   <script>
+                       CKEDITOR.replace('editor1');
+                   </script>
+                <button class="customButton selectReceiver" type="button">
+                    Отправить
+                </button>
+             </form>
+        </div>
+        <!--<div class="conrolPanel">
+            <div class="serviceButtonsPanel">
+                <button class="choiceServiceButton">
+                    
+                </button>
+
+                <button class="choiceServiceButton">
+
+                </button>
+            
+                <button class="choiceServiceButton">
+
+                </button>
+
+                <button class="choiceServiceButton">
+
+                </button>
+            </div>
+         </div>-->
+        
+         
+    </div>
+    <div class="modalWindow">
+        <div class="windowSelectReciever">
+            <ul class="tabControl">
+                <li id="1" class="tabButton"><a href="#groups">Группы рассылки</a></li>
+                <li id="2" class="tabButton"><a href="#contacts">Адресаты</a></li>
+            </ul>
+            <div class="tabContent">
+
+                <div id="groups" class="tab">
+
+                     <div class="wrapper">
+                        <p>Выберите адресаты, которым будет разослано сообщение</p>
+                        <table class="customTable groupTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Группа
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="contacts" class="tab">
+                    <div class="wrapper">
+                        <p>Выберите адресаты, которым будет разослано сообщение</p>
+                        <table class="customTable contactTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Имя адресата
+                                    </th>
+                                    <th>
+                                        Платформа
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                </div>
+                 
+            </div>
+            <div class="buttonPanel">
+                <button class="customButton cnacelButton">Отмена</button>
+                <button class="customButton okButton">Ок</button>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/selectContactMailing.js"></script>
+</div>
